@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--Staff Database-->
+<Staffs>
+  <Staff>
+    <Name>Alice</Name>
+    <Password>Dnmh5HOhf/EdJIdIhVUcc8JYS/MNCDgfWKA+BLzAnNXiDsCDQvC3I1p8+K++kpriyYA4QiokTzxoTuYDnV66ng==</Password>
+    <Role>Staff2</Role>
+  </Staff>
+  <Staff>
+    <Name>John</Name>
+    <Password>/3VDLhMlV44qHOltTOy8t8VH2TV8Hi9fHZXPmi5CFWrGCpg/CFe2i4RD93F9aioQo7DkaRaNzshM2ItONUp8Kw==</Password>
+    <Role>Staff2</Role>
+  </Staff>
+  <Staff>
+    <Name>Julia</Name>
+    <Password>TD+i7qMnwZbOg1cSU6Rg/VR+bjN80iHdHLzlCVM6D1LcFghFbnV91CITXxMLE3T5lm5Stj2oHx86oXuPiubdjA==</Password>
+    <Role>Staff1</Role>
+  </Staff>
+  <Staff>
+    <Name>Bob</Name>
+    <Password>nbYoUg/m5PF2yQOIvtLyW75f3icjXD3aFCdas5qsfcN5Zo+0/P6dB4BSeM+1aZxEMnWbbFqNHJ/4NwuCG1fr5g==</Password>
+    <Role>Staff1</Role>
+  </Staff>
+  <Staff>
+    <Name>MaxStaff1</Name>
+    <Password>PjhUf8BIRMxPG/9sAyclJqQwPnYH40oVYGgomt2qmlAhUOr6zUph7w/Cja1bIbL4JRNHsNfzJfbUb9PjvM9sWQ==</Password>
+    <Role>Staff1</Role>
+  </Staff>
+  <Staff>
+    <Name>MaxStaff2</Name>
+    <Password>84P0Z/hSX+L4QWpWi3HEPnuufMvciHOGMu9ksMvFnc8sgq5C+6Xisz8AzX2kYoaGO+mPdbQGzKgKtH4oYNSSXw==</Password>
+    <Role>Staff2</Role>
+  </Staff>
+</Staffs>

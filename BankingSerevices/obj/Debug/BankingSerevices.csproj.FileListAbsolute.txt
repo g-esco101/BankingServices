@@ -1,0 +1,8 @@
+C:\Users\LeonardoDaVinci\Desktop\PortfolioPORTFOLIO\BankingSerevices\BankingSerevices\bin\Debug\BankingSerevices.exe.config
+C:\Users\LeonardoDaVinci\Desktop\PortfolioPORTFOLIO\BankingSerevices\BankingSerevices\bin\Debug\BankingSerevices.exe
+C:\Users\LeonardoDaVinci\Desktop\PortfolioPORTFOLIO\BankingSerevices\BankingSerevices\bin\Debug\BankingSerevices.pdb
+C:\Users\LeonardoDaVinci\Desktop\PortfolioPORTFOLIO\BankingSerevices\BankingSerevices\obj\Debug\BankingSerevices.csproj.CoreCompileInputs.cache
+C:\Users\LeonardoDaVinci\Desktop\PortfolioPORTFOLIO\BankingSerevices\BankingSerevices\obj\Debug\BankingSerevices.exe
+C:\Users\LeonardoDaVinci\Desktop\PortfolioPORTFOLIO\BankingSerevices\BankingSerevices\obj\Debug\BankingSerevices.pdb
+C:\Users\LeonardoDaVinci\Desktop\PortfolioPORTFOLIO\BankingSerevices\BankingSerevices\bin\Debug\App_Data\Accounts.xml
+C:\Users\LeonardoDaVinci\Desktop\PortfolioPORTFOLIO\BankingSerevices\BankingSerevices\obj\Debug\BankingSerevices.csprojAssemblyReference.cache

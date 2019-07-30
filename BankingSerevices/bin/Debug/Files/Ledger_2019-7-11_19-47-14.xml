@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml-stylesheet type='text/xsl' ref='Ledger.xsl'?>
+<!--Transaction Ledger-->
+<Transactions>
+  <Transaction>
+    <AccountNumber>1234</AccountNumber>
+    <Nickname>BigSunDevilSleepsQuietly</Nickname>
+    <Owner>Albert</Owner>
+    <TransactionType AssociatedAccount="">Deposit</TransactionType>
+    <Amount>1000</Amount>
+    <Balance>9001000</Balance>
+    <Date>2019-7-09</Date>
+    <Time>12:18:57</Time>
+  </Transaction>
+  <Transaction>
+    <AccountNumber>1234</AccountNumber>
+    <Nickname>BigSunDevilSleepsQuietly</Nickname>
+    <Owner>Albert</Owner>
+    <TransactionType AssociatedAccount="">Withdrawal</TransactionType>
+    <Amount>1000</Amount>
+    <Balance>9000000</Balance>
+    <Date>2019-7-09</Date>
+    <Time>12:19:05</Time>
+  </Transaction>
+  <Transaction>
+    <AccountNumber>1234</AccountNumber>
+    <Nickname>BigSunDevilSleepsQuietly</Nickname>
+    <Owner>Albert</Owner>
+    <TransactionType AssociatedAccount="">Deposit</TransactionType>
+    <Amount>2000</Amount>
+    <Balance>Invalid</Balance>
+    <Date>2019-7-10</Date>
+    <Time>04:11:28</Time>
+  </Transaction>
+  <Transaction>
+    <AccountNumber>1234</AccountNumber>
+    <Nickname>BigSunDevilSleepsQuietly</Nickname>
+    <Owner>Albert</Owner>
+    <TransactionType AssociatedAccount="">Deposit</TransactionType>
+    <Amount>1000</Amount>
+    <Balance>Invalid</Balance>
+    <Date>2019-7-10</Date>
+    <Time>04:12:06</Time>
+  </Transaction>
+  <Transaction>
+    <AccountNumber>1234</AccountNumber>
+    <Nickname>BigSunDevilSleepsQuietly</Nickname>
+    <Owner>Albert</Owner>
+    <TransactionType AssociatedAccount="">Deposit</TransactionType>
+    <Amount>1000</Amount>
+    <Balance>Invalid</Balance>
+    <Date>2019-7-10</Date>
+    <Time>04:14:20</Time>
+  </Transaction>
+  <Transaction>
+    <AccountNumber>1234</AccountNumber>
+    <Nickname>BigSunDevilSleepsQuietly</Nickname>
+    <Owner>Albert</Owner>
+    <TransactionType AssociatedAccount="">Deposit</TransactionType>
+    <Amount>1000</Amount>
+    <Balance>9001000</Balance>
+    <Date>2019-7-10</Date>
+    <Time>15:01:39</Time>
+  </Transaction>
+  <Transaction>
+    <AccountNumber>1234</AccountNumber>
+    <Nickname>BigSunDevilSleepsQuietly</Nickname>
+    <Owner>Albert</Owner>
+    <TransactionType AssociatedAccount="">Withdrawal</TransactionType>
+    <Amount>1000</Amount>
+    <Balance>9000000</Balance>
+    <Date>2019-7-10</Date>
+    <Time>15:01:45</Time>
+  </Transaction>
+  <Transaction>
+    <AccountNumber>1234</AccountNumber>
+    <Nickname>BigSunDevilSleepsQuietly</Nickname>
+    <Owner>Albert</Owner>
+    <TransactionType AssociatedAccount="SmartEagleSpeaksJoyfully">Transfer</TransactionType>
+    <Amount>-1000</Amount>
+    <Balance>Invalid</Balance>
+    <Date>2019-7-10</Date>
+    <Time>15:02:04</Time>
+  </Transaction>
+  <Transaction>
+    <AccountNumber>1234</AccountNumber>
+    <Nickname>BigSunDevilSleepsQuietly</Nickname>
+    <Owner>Albert</Owner>
+    <TransactionType AssociatedAccount="">Withdrawal</TransactionType>
+    <Amount>1</Amount>
+    <Balance>8999999</Balance>
+    <Date>2019-7-10</Date>
+    <Time>15:02:24</Time>
+  </Transaction>
+  <Transaction>
+    <AccountNumber>1234</AccountNumber>
+    <Nickname>BigSunDevilSleepsQuietly</Nickname>
+    <Owner>Albert</Owner>
+    <TransactionType AssociatedAccount="">Deposit</TransactionType>
+    <Amount>1</Amount>
+    <Balance>9000000</Balance>
+    <Date>2019-7-10</Date>
+    <Time>15:02:31</Time>
+  </Transaction>
+  <Transaction>
+    <AccountNumber>1234</AccountNumber>
+    <Nickname>BigSunDevilSleepsQuietly</Nickname>
+    <Owner>Albert</Owner>
+    <TransactionType AssociatedAccount="SmartEagleSpeaksJoyfully">Transfer</TransactionType>
+    <Amount>-5</Amount>
+    <Balance>Invalid</Balance>
+    <Date>2019-7-10</Date>
+    <Time>15:02:47</Time>
+  </Transaction>
+  <Transaction>
+    <AccountNumber>1234</AccountNumber>
+    <Nickname>BigSunDevilSleepsQuietly</Nickname>
+    <Owner>Albert</Owner>
+    <TransactionType AssociatedAccount="HandsomeBruinStudiesRepeatedly">Transfer</TransactionType>
+    <Amount>-1</Amount>
+    <Balance>8999999</Balance>
+    <Date>2019-7-10</Date>
+    <Time>15:28:15</Time>
+  </Transaction>
+  <Transaction>
+    <AccountNumber>1234</AccountNumber>
+    <Nickname>BigSunDevilSleepsQuietly</Nickname>
+    <Owner>Albert</Owner>
+    <TransactionType AssociatedAccount="HandsomeBruinStudiesRepeatedly">Transfer</TransactionType>
+    <Amount>-1</Amount>
+    <Balance>8999998</Balance>
+    <Date>2019-7-10</Date>
+    <Time>15:28:20</Time>
+  </Transaction>
+  <Transaction>
+    <AccountNumber>1234</AccountNumber>
+    <Nickname>BigSunDevilSleepsQuietly</Nickname>
+    <Owner>Albert</Owner>
+    <TransactionType AssociatedAccount="HandsomeBruinStudiesRepeatedly">Transfer</TransactionType>
+    <Amount>-10</Amount>
+    <Balance>8999990</Balance>
+    <Date>2019-7-10</Date>
+    <Time>15:36:24</Time>
+  </Transaction>
+  <Transaction>
+    <AccountNumber>0000</AccountNumber>
+    <Nickname>HumbleSharkStudiesRepeatedly</Nickname>
+    <Owner>Boson</Owner>
+    <TransactionType AssociatedAccount="">Withdrawal</TransactionType>
+    <Amount>1000</Amount>
+    <Balance>999000</Balance>
+    <Date>2019-7-10</Date>
+    <Time>15:44:51</Time>
+  </Transaction>
+</Transactions>
