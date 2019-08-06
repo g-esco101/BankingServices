@@ -13,7 +13,7 @@
     <Nickname>BigSunDevilSleepsQuietly</Nickname>
     <Owner>Albert</Owner>
     <Password>piA2VYdIWEzXSqKPWB9nRXNP2jqitZY4B20gdSyAxPNcPinw/scoBI6Fhzp27nlEl8OiXxb524ifs04FTGqKAw==</Password>
-    <Balance>8998301</Balance>
+    <Balance>8999099</Balance>
   </Account>
   <Account>
     <AccountNumber>4321</AccountNumber>
@@ -27,41 +27,27 @@
     <Nickname>ResilientAlienJumpsSmoothly</Nickname>
     <Owner>Higgs</Owner>
     <Password>gdDVZyv9TlbyBP7KI+toYN/aomDvB18conyCke6xI5PXgkLMmqsz5KLoL3XuuIkJetQzb7p2+rWimZnD8qbnBA==</Password>
-    <Balance>7001200</Balance>
+    <Balance>7000201</Balance>
   </Account>
   <Account>
     <AccountNumber>1111</AccountNumber>
     <Nickname>BigBruinPlaysLoudly</Nickname>
     <Owner>Hawking</Owner>
     <Password>NFI4l5oEOPRicQr+nKYdIHKt7vepz7IefnyvjCpFxnx9sseLYvKTZBJoQ0BRh9r+hUM6sG1G2H7zhDGWXNWP1w==</Password>
-    <Balance>4999600</Balance>
+    <Balance>4999000</Balance>
   </Account>
   <Account>
     <AccountNumber>2222</AccountNumber>
     <Nickname>SmallSunDevilEatsQuickly</Nickname>
     <Owner>Poisson</Owner>
     <Password>dvd5zKMBvV/hCuNx7tWJRdo18TLBUIFyS03NGAoHhE/0rSjeNEQnrjPBn9h8ZvLHzdJoinKZw4z6K0YWagnzGA==</Password>
-    <Balance>2000000</Balance>
+    <Balance>2001000</Balance>
   </Account>
   <Account>
-    <AccountNumber>9209</AccountNumber>
-    <Nickname>SmartSunDevilStudiesJoyfully</Nickname>
-    <Owner>Gauss</Owner>
-    <Password>oLiIzncqK6N9/O47J2D4dKS6zIqy5/i/unHVjWxvuj3IPjCwYvGS5aVhR60Cd6jY3uzaFLurCXN0foUGMYmxdg==</Password>
-    <Balance>5000000</Balance>
-  </Account>
-  <Account>
-    <AccountNumber>2845</AccountNumber>
-    <Nickname>SmallSlothRunsHappily</Nickname>
-    <Owner>Delta</Owner>
-    <Password>Nrzb78sHBpXmSQxiJ4XEfUCz+T9ATfHVgf3ZUszUFRs/Q2NdJogjEpch1xwiyEtrd90uRZ5FSsknLXqLUrIzbA==</Password>
-    <Balance>78000000</Balance>
-  </Account>
-  <Account>
-    <AccountNumber>5489</AccountNumber>
-    <Nickname>SkinnyDogWritesJoyfully</Nickname>
-    <Owner>Schrodinger</Owner>
-    <Password>3ZbbSawXwRBM/79/+m9hiOT8Svq31FOC8DU4sqX43N04iAiV/MoJadbqpKExN9JEHCOeSk1U2aGAPRbJUNYevg==</Password>
-    <Balance>91000000</Balance>
+    <AccountNumber>aerg</AccountNumber>
+    <Nickname>Invalid Entry</Nickname>
+    <Owner>Hamiltonian</Owner>
+    <Password>64/+D1AumeHPku3C9xF8reJoulSZESGFlDslUR51BzwCIcul1YOrb17Eq7/rO2sqHNpmDYDCNmjxZrLtyQ0e7w==</Password>
+    <Balance>1000000000</Balance>
   </Account>
 </Accounts>

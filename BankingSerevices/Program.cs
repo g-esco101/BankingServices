@@ -156,18 +156,18 @@ namespace BankingSerevices
             }
         }
 
-        // Hashes the userName (salt) & the password. Returns the hashed password.
+        // Adds the salt to the password & then hashes it. Returns the hashed password.
         // Invokes the Hashing RESTful service. 
-        private static string InvokeHash(string pwd, string userName)
+        private static string InvokeHash(string pwd, string salt)
         {
             try
             {
                 // Create the base address
                 Uri baseUri = new Uri("http://localhost:54193/Service.svc");
                 // Create the path from tree root to the child node
-                UriTemplate myTemplate = new UriTemplate("hash/{password}/{user}");
+                UriTemplate myTemplate = new UriTemplate("hash/{password}/{salt}");
                 // Assign values to variables to complete Uri
-                Uri completeUri = myTemplate.BindByPosition(baseUri, pwd, userName);
+                Uri completeUri = myTemplate.BindByPosition(baseUri, pwd, salt);
                 WebClient proxy = new WebClient();
                 byte[] abc = proxy.DownloadData(completeUri);
                 Stream strm = new MemoryStream(abc);
