@@ -24,7 +24,7 @@ namespace BankingSerevices
         string Storage(string fileName, byte[] fileContents);
 
         [OperationContract]
-        string CreateAccount(string accountNumber, string owner, string balance);
+        string CreateAccount(string accountNumber, string owner, string balance, string password);
 
         [OperationContract]
         string Transfer(string source, string destination, string amount);
@@ -53,7 +53,7 @@ namespace BankingSerevices
 
     public class myService : myInterface
     {
-        // Updates the password in Accounts.xml.
+        // Returns true if the password in Accounts.xml is updated.
         public bool UpdatePassword(string owner, string currentPassword, string newPassword1, string newPassword2)
         {
             if (newPassword1 != newPassword2)
@@ -66,11 +66,11 @@ namespace BankingSerevices
             {
                 xmlDocAccts = XDocument.Load(XMLLocale);
                 var existingAccount = from c in xmlDocAccts.Root.Elements("Account")
-                                      where (c.Element("Owner").Value == owner && c.Element("Password").Value == InvokeHash(currentPassword, owner))
+                                      where (c.Element("Owner").Value == owner && c.Element("Password").Value == currentPassword)
                                       select c;
                 foreach (var ea in existingAccount)
                 {
-                    ea.Element("Password").Value = InvokeHash(newPassword1, owner);
+                    ea.Element("Password").Value = newPassword1;
                     xmlDocAccts.Save(XMLLocale);
                     return true;
                 }
@@ -156,30 +156,6 @@ namespace BankingSerevices
             }
         }
 
-        // Adds the salt to the password & then hashes it. Returns the hashed password.
-        // Invokes the Hashing RESTful service. 
-        private static string InvokeHash(string pwd, string salt)
-        {
-            try
-            {
-                // Create the base address
-                Uri baseUri = new Uri("http://localhost:54193/Service.svc");
-                // Create the path from tree root to the child node
-                UriTemplate myTemplate = new UriTemplate("hash/{password}/{salt}");
-                // Assign values to variables to complete Uri
-                Uri completeUri = myTemplate.BindByPosition(baseUri, pwd, salt);
-                WebClient proxy = new WebClient();
-                byte[] abc = proxy.DownloadData(completeUri);
-                Stream strm = new MemoryStream(abc);
-                DataContractSerializer obj = new DataContractSerializer(typeof(string));
-                return obj.ReadObject(strm).ToString();
-            }
-            catch (Exception ex)
-            {
-                return ex.Message;
-            }
-        }
-
         // Given the account nickname & the amount, it withdrawals the amount & returns the new balance.
         // Invokes the RESTful Subtraction service.
         public string Withdrawal(string acctNickname, string amount)
@@ -255,41 +231,37 @@ namespace BankingSerevices
             XDocument xmlDocAccts = new XDocument();
 
             try
-            {   // TransactionScope makes the operations Atomic, Consistent, Isolated, & Durable
-                using (TransactionScope tScope = new TransactionScope())
-                {
-                    xmlDocAccts = XDocument.Load(XMLLocale);
-                    var transferSource = from c in xmlDocAccts.Root.Elements("Account")
-                                         where (c.Element("Nickname").Value == source)
-                                         select c;
+            {
+                xmlDocAccts = XDocument.Load(XMLLocale);
+                var transferSource = from c in xmlDocAccts.Root.Elements("Account")
+                                     where (c.Element("Nickname").Value == source)
+                                     select c;
 
-                    var transferDestination = from d in xmlDocAccts.Root.Elements("Account")
-                                              where (d.Element("Nickname").Value == destination)
-                                              select d;
-                    foreach (var ts in transferSource)
+                var transferDestination = from d in xmlDocAccts.Root.Elements("Account")
+                                          where (d.Element("Nickname").Value == destination)
+                                          select d;
+                foreach (var ts in transferSource)
+                {
+                    foreach (var td in transferDestination)
                     {
-                        foreach (var td in transferDestination)
+                        returnBalance = subtractionRest(ts.Element("Balance").Value, amount);
+                        if (Convert.ToDouble(returnBalance) < 0)
                         {
-                            returnBalance = subtractionRest(ts.Element("Balance").Value, amount);
-                            if (Convert.ToDouble(returnBalance) < 0)
-                            {
-                                return "Insufficient funds";
-                            }
-                            ts.Element("Balance").Value = returnBalance;
-                            td.Element("Balance").Value = additionRest(td.Element("Balance").Value, amount);
+                            return "Insufficient funds";
                         }
+                        ts.Element("Balance").Value = returnBalance;
+                        td.Element("Balance").Value = additionRest(td.Element("Balance").Value, amount);
                     }
-                    xmlDocAccts.Save(XMLLocale);
-                    tScope.Complete();
-                    return returnBalance;
                 }
+                xmlDocAccts.Save(XMLLocale);
+                return returnBalance;
             }
             catch
             {
                 return "Transaction Fault";
             }
         }
-        
+
         // Invokes the addition RESTful service to add the amount to the balance.
         // Returns the new balance.
         private string additionRest(string balance, string amount)
@@ -343,7 +315,7 @@ namespace BankingSerevices
         {
             try
             {
-                string path = Directory.GetCurrentDirectory() + @"\Files"; 
+                string path = Directory.GetCurrentDirectory() + @"\Files";
 
                 string serverPathAndFilename = Path.Combine(path, fileName);
                 if (File.Exists(serverPathAndFilename))
@@ -483,7 +455,7 @@ namespace BankingSerevices
         // & generates a password via calling HashService RESTful service. 
         // The account number, nickname, password, & balance are stored in Accounts.xml. 
         // The account nickname is returned. Note: invalid balance types will be assigned 0.
-        public string CreateAccount(string accountNumber, string owner, string balance)
+        public string CreateAccount(string accountNumber, string owner, string balance, string password)
         {
             // Tests if balance is in valid format.
             try
@@ -502,16 +474,6 @@ namespace BankingSerevices
             catch
             {
                 return nickname;
-            }
-            string password = "Hashing Fault";
-            try
-            {
-                // Call to HashService to hash temporary default password (i.e. 123) & ownerName to create a temporary password.
-                password = InvokeHash("123", owner);
-            }
-            catch
-            {
-                return password;
             }
             // Check if account already exists
             if (AccountExists(owner))
@@ -551,7 +513,6 @@ namespace BankingSerevices
             xmlDocAccts.Save(XMLLocale);
             return nickname;
         }
-
 
         // Converts numbers to memorable phrases.
         // Best to use numbers with the number of digits divisible by four.  
@@ -743,7 +704,7 @@ namespace BankingSerevices
                 {
                     debug.IncludeExceptionDetailInFaults = true;
                 }
-                
+
 
                 // Start service & wait for request.
                 selfHost.Open();
