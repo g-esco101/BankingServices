@@ -508,9 +508,9 @@ namespace BankingSerevices
                     new XElement("Owner", owner),
                     new XElement("Password", password),
                     new XElement("Balance", balance))));
+                    xmlDocAccts.Save(XMLLocale);
                 }
             }
-            xmlDocAccts.Save(XMLLocale);
             return nickname;
         }
 
