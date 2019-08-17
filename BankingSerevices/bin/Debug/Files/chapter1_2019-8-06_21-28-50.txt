@@ -1,0 +1,13 @@
+
+Chapter 1
+Introduction to Distributed Service-Oriented Computing 
+This chapter introduces computer architecture, different computing paradigms, and particularly, the distributed computing paradigm and Service-Oriented Computing (SOC) paradigm.
+1.1	Computer Architecture and Computing Paradigms
+Software architectures and distributed software development are related to the computer system architectures on which the software is executed. This section introduces the computer architectures and various computing paradigms.
+1.1.1	Computer Architecture
+The computer architecture for a single-processor computer often refers to the processor architecture, which is the interface between software and hardware or the instruction architecture of the processor (Patterson 2004). For a computer with multi-processors, the architecture often refers to the instruction and data streams. Flynn’s Taxonomy (Flynn 1972) categorized computer architecture into four types: 
+ Single Instruction stream and Single Data stream (SISD), which refers to the simple processor systems; 
+ Single Instruction stream and Multiple Data streams (SIMD); for example, the vector or array computers; 
+ Multiple Instruction streams and Single Data stream (MISD); for example, fault-tolerant computer systems that perform redundant computing on the same data stream and voting on the results:
+ Multiple Instruction streams and Multiple Data streams (MIMD), which refers to the systems consisting standalone computer systems with their own memory and control, ALU, and I/O units. 
+The MIMD systems are often considered distributed systems, which have different areas of concerns, as shown in Figure 1.1. Distributed computing is about the principles, methods, and techniques of expressing computation in a parallel and/or distributed manner. Distributed software architecture concerns organization and interfacing among the software components. Network architecture studies the topology and connectivity of network nodes. Network communication deals with the layers of protocols that allow the nodes to communicate with each other and understand the data formats of each other. Some studies use operating systems to differentiate distributed systems and networks. Distributed systems have coherent operating systems, while a set of network nodes has independent operating systems.

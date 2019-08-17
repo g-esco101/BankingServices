@@ -13,7 +13,7 @@
     <Nickname>BigSunDevilSleepsQuietly</Nickname>
     <Owner>Albert</Owner>
     <Password>pZRImMYdwGHdWcL9/32IqzyNo0X+0dK8TQuzrEu7DFk=</Password>
-    <Balance>8999995</Balance>
+    <Balance>9000000</Balance>
   </Account>
   <Account>
     <AccountNumber>4321</AccountNumber>
@@ -41,6 +41,6 @@
     <Nickname>SmallSunDevilEatsQuickly</Nickname>
     <Owner>Poisson</Owner>
     <Password>9PKSq+vpBPkw2pICe7Fn9ssXCuhAuFzMkHINPHJvohw=</Password>
-    <Balance>2000005</Balance>
+    <Balance>2000000</Balance>
   </Account>
 </Accounts>
